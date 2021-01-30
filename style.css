@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Song+Myung&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: calc(745.6px * 3);
+    width: 100%;
+}
+
+body {
+    display: flex;
+
+    flex-flow: column;
+}
+
+.container[data-index='1']{
+    height: 100vh;
+    width: 100%;
+}
+
+.container[data-index='2']{
+    height: 100vh;
+    width: 100%;
+    align-self: flex-start;
+    justify-self: center;
+
+    display: flex;
+}
+
+.container[data-index='3']{
+    height: 100vh;
+    width: 100%;
+    align-self: center;
+    justify-self: flex-end;
+
+    display: flex;
+    flex-flow:row-reverse;
+}
+
+.stat {
+    width: 75%;
+    justify-self: flex-start;
+
+    padding: 0 20px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.statContainer.people {
+    max-width: 512px;
+    max-height: 282px;
+    /* border: 1px solid black; */
+    padding: 20px;
+
+    display: flex;
+    flex-flow: column;
+    align-self: flex-start;
+}
+
+.statContainer.cause {
+    max-width: 512px;
+    max-height: 282px;
+    /* border: 1px solid black; */
+    padding: 20px;
+
+    display: flex;
+    flex-flow: column;
+    align-self: flex-end;
+}
+
+.infographic {
+    width: 512px;
+    height: 150px;
+    box-sizing: border-box;
+    
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+}
+
+/* .stat {
+    box-sizing: border-box;
+} */
+
+.img_person {
+    transition: 1s;
+    opacity: 0;
+}
+
+.visible {
+    transition: 1s;
+    opacity: 1;
+}
+
+.headline {
+    font-family: 'Song Myung', sans-serif;
+    font-size: 50px;
+    margin-bottom: 10px;;
+}
+
+.source {
+    font-family: 'Song Myung', sans-serif;
+    font-size: 15px;
+    align-self: flex-end;
+}
+
+.container[data-index='2'] .article {
+    width: 25%;
+    /* justify-self: flex-end */
+    padding: 0 20px;
+    background: green;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+.container[data-index='2'] .main_title {
+    margin-top: 50px;
+
+    font-family: 'Song Myung', sans-serif;
+    font-size: 50px;
+    color: white;
+}
+
+.container[data-index='2'] .main_text {
+    margin-bottom: 70px;
+
+    font-family: 'Song Myung', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+.container[data-index='3'] .article {
+    width: 25%;
+    /* justify-self: flex-end */
+    padding: 0 20px;
+    background: green;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+.container[data-index='3'] .main_title {
+    margin-top: 50px;
+
+    font-family: 'Song Myung', sans-serif;
+    font-size: 50px;
+    color: white;
+    text-align: end;
+}
+
+.container[data-index='3'] .main_text {
+    margin-bottom: 70px;
+
+    font-family: 'Song Myung', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+
