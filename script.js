@@ -61,10 +61,11 @@ function chartDraw() {
         let statContainer = document.getElementsByClassName('statContainer');
         let rect = statContainer[1].getBoundingClientRect();
         // console.log("rect.top", rect.top);
+        // console.log(rect.width, rect.height);
         // console.log("window.innerHeight", window.innerHeight*0.85);
         const canvas = document.getElementById("chart");
-            const ctx = canvas.getContext("2d");
-        if(rect.top < window.innerHeight*2/3) {
+        const ctx = canvas.getContext("2d");
+        if(rect.top < window.innerHeight*2/3 && rect.top >= -150) {
             let pieChart = new Chart(ctx, {
                 type: 'pie',
                 data: {
@@ -85,8 +86,8 @@ function chartDraw() {
                 }
             })
             duration = 0;
-        } else if (rect.top > window.innerHeight*0.85) {
-            ctx.clearRect(0,0, rect.width, rect.height);
+        } else if (rect.top > window.innerHeight*0.85 || rect.top < -350) {
+            ctx.clearRect(0,0,rect.width, rect.height);
             duration = 1500;
         }
     })
